@@ -25,6 +25,12 @@
           <AssociatedConnUserName />
           <FullPath>DDL.sql</FullPath>
         </FileNode>
+        <FileNode Name="DML(Procedures).sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-5SIOM0T\SQLEXPRESS:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>DESKTOP-5SIOM0T\SQLEXPRESS</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>DML(Procedures).sql</FullPath>
+        </FileNode>
         <FileNode Name="DML.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-5SIOM0T\SQLEXPRESS:True</AssociatedConnectionMoniker>
           <AssociatedConnSrvName>DESKTOP-5SIOM0T\SQLEXPRESS</AssociatedConnSrvName>
