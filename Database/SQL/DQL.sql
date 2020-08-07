@@ -198,3 +198,42 @@ SELECT CNIC,
 FROM CLINIC.OC_PATIENT
 GROUP BY CNIC
 HAVING COUNT(*) >= 2
+
+
+/*7*/
+SELECT * FROM
+(SELECT VISIT_NO, 
+		DATENAME(MONTH,
+		VISIT_DATE) AS TMONTH,
+		PAT_ID
+FROM CLINIC.OC_VISITS) T
+PIVOT
+(COUNT(VISIT_NO) FOR TMONTH IN (January, February, March, April, May, June, July, August, September, October, November, December)) AS PIVOT_TABLE
+
+SELECT * FROM
+(SELECT VISIT_NO, 
+		DATENAME(MONTH,
+		VISIT_DATE) AS TMONTH
+FROM CLINIC.OC_VISITS) T
+PIVOT
+(COUNT(VISIT_NO) FOR TMONTH IN (January, February, March, April, May, June, July, August, September, October, November, December)) AS PIVOT_TABLE
+
+
+/*8*/
+SELECT * FROM
+(SELECT DOC_ID, 
+		DATENAME(MONTH,
+		ENROLLMENT_DATE) AS TMONTH,
+		DOC_ID AS 'Doctor ID',
+		CNIC
+FROM CLINIC.OC_DOCTOR) T
+PIVOT
+(COUNT(DOC_ID) FOR TMONTH IN (January, February, March, April, May, June, July, August, September, October, November, December)) AS PIVOT_TABLE
+
+SELECT * FROM
+(SELECT DOC_ID, 
+		DATENAME(MONTH,
+		ENROLLMENT_DATE) AS TMONTH
+FROM CLINIC.OC_DOCTOR) T
+PIVOT
+(COUNT(DOC_ID) FOR TMONTH IN (January, February, March, April, May, June, July, August, September, October, November, December)) AS PIVOT_TABLE
