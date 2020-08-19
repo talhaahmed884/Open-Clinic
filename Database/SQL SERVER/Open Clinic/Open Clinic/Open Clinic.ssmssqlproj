@@ -49,6 +49,12 @@
           <AssociatedConnUserName />
           <FullPath>DQL.sql</FullPath>
         </FileNode>
+        <FileNode Name="Functions.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-5SIOM0T\SQLEXPRESS:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>DESKTOP-5SIOM0T\SQLEXPRESS</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>Functions.sql</FullPath>
+        </FileNode>
         <FileNode Name="Procedures.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-5SIOM0T\SQLEXPRESS:True</AssociatedConnectionMoniker>
           <AssociatedConnSrvName>DESKTOP-5SIOM0T\SQLEXPRESS</AssociatedConnSrvName>

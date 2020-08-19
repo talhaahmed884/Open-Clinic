@@ -460,7 +460,8 @@ BEGIN
                 CNIC, 
                 QUALIFICATION, 
                 SPECIALIZATION, 
-                FEE, 
+                FEE,
+				ENROLLMENT_DATE,
                 EDIT_DATETIME, 
                 OPERATION_TYPE)
             SELECT 
@@ -468,7 +469,8 @@ BEGIN
                 CNIC, 
                 QUALIFICATION, 
                 SPECIALIZATION, 
-                FEE, 
+                FEE,
+				ENROLLMENT_DATE,
                 GETDATE(), 
                 @OPERATION_TYPE 
             FROM DELETED
@@ -480,6 +482,7 @@ BEGIN
                 QUALIFICATION, 
                 SPECIALIZATION, 
                 FEE, 
+				ENROLLMENT_DATE,
                 EDIT_DATETIME, 
                 OPERATION_TYPE)
             SELECT 
@@ -488,6 +491,7 @@ BEGIN
                 QUALIFICATION, 
                 SPECIALIZATION, 
                 FEE, 
+				ENROLLMENT_DATE,
                 GETDATE(), 
                 @OPERATION_TYPE 
             FROM INSERTED
@@ -503,6 +507,7 @@ BEGIN
                 QUALIFICATION, 
                 SPECIALIZATION, 
                 FEE, 
+				ENROLLMENT_DATE,
                 EDIT_DATETIME, 
                 OPERATION_TYPE)
             SELECT 
@@ -511,6 +516,7 @@ BEGIN
                 QUALIFICATION, 
                 SPECIALIZATION, 
                 FEE, 
+				ENROLLMENT_DATE,
                 GETDATE(), 
                 @OPERATION_TYPE 
             FROM INSERTED
@@ -528,6 +534,7 @@ BEGIN
             QUALIFICATION, 
             SPECIALIZATION, 
             FEE, 
+			ENROLLMENT_DATE,
             EDIT_DATETIME, 
             OPERATION_TYPE)
         SELECT 
@@ -536,6 +543,7 @@ BEGIN
             QUALIFICATION, 
             SPECIALIZATION, 
             FEE, 
+			ENROLLMENT_DATE,
             GETDATE(), 
             @OPERATION_TYPE 
         FROM DELETED
