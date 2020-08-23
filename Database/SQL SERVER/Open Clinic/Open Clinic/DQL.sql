@@ -275,3 +275,14 @@ EXECUTE sp_executesql @SQL
 CREATE SYNONYM CLINIC.SYNONYM_OC_DOCTOR
 FOR CLINIC.OC_DOCTOR
 SELECT * FROM CLINIC.SYNONYM_OC_DOCTOR
+
+
+/*12*/		/*After importing a seprate Excel Sheet*/
+CREATE TABLE Request_Code (Sr_No INTEGER PRIMARY KEY IDENTITY(1,1), Code VARCHAR(MAX))
+INSERT INTO Request_Code SELECT SUBSTRING("Description", CHARINDEX(':',"Description")+2, LEN("Description")) FROM dbo.ROUGH
+SELECT * FROM Request_Code
+DROP TABLE Request_Code
+
+
+/*13*/
+SELECT Code, Count(Code) As Occurence From Request_Code Group by Code
